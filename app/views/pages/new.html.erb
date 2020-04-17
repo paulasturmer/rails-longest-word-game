@@ -1,0 +1,17 @@
+<h1>Longest Word Game</h1>
+<h2>New Game</h2>
+
+<p>Let's play the game</p>
+<p><%= @letters.join(', ') %></p>
+<br>
+<form action="/score" method="get">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="name" placeholder="Type your name" value="">
+  <input type="text" name="input" placeholder="Type your answer" value="">
+  <input type="submit" value="Go" class="btn-submit">
+</form>
+<br>
+<p><%= @message %></p>
+<p><%= @message_score %></p>
+<br><br>
+<a href="/score">Score</a>
